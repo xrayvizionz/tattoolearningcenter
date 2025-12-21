@@ -1,11 +1,50 @@
 ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Tattoo Learning Center | Training, Regulations & Education"
+  description="Tattoo Learning Center is a free educational resource for tattoo artists and apprentices, featuring state regulations, training opportunities, and practice tools."
+>
+
+  <section class="hero">
+    <h1>Tattoo Learning Center</h1>
+
+    <p class="subtitle">Your Resource for Tattoo Training & Education.</p>
+
+    <p class="description">
+      Helping artists, apprentices and educators to build skills, discover opportunities and launch
+      successful tattoo careers.
+    </p>
+
+    <div class="actions">
+      <a class="button primary" href="/regulations">Find your state's rules</a>
+      <a class="button secondary" href="/training">Browse training opportunities</a>
+    </div>
+  </section>
+
+  <section class="features">
+    <a href="/regulations" class="card card-link">
+      <h3>State Rules & Regulations</h3>
+      <p>
+        Tattoo licensing requirements for each state, including links to official sources.
+      </p>
+    </a>
+
+    <a href="/practice-tools" class="card card-link">
+      <h3>Tattoo Training Tools & Resources</h3>
+      <p>
+        Books, Practice Supplies, Health & Safety Training Providers, and Learning Resources.
+      </p>
+    </a>
+
+    <a href="/training" class="card card-link">
+      <h3>Training Events & Opportunities</h3>
+      <p>
+        Hard-to-find workshops, apprenticeships, and structured cohorts.
+      </p>
+    </a>
+  </section>
+
+  
 </Layout>

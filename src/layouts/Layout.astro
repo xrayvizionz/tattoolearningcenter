@@ -1,22 +1,51 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
-</html>
+---
+import "../styles.css";
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+const {
+  title = "Tattoo Learning Center",
+  description = "Your Resource for Tattoo Training & Education."
+} = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+  </head>
+
+  <body>
+    <header class="site-header">
+      <div class="container">
+        <a href="/" class="logo">TattooLearningCenter.org</a>
+
+        <nav class="nav">
+          <a href="/regulations">Regulations</a>
+          <a href="/practice-tools">Practice & Tools</a>
+          <a href="/training">Training & Cohorts</a>
+          <a href="/about">About</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="site-main">
+      <slot />
+    </main>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p class="disclaimer">
+          This site is for educational purposes only. We do not create or enforce
+          laws, rules, or regulations. Always confirm details and changes with
+          your official state or local authority.
+        </p>
+
+        <p class="copyright">
+          © 2025 TattooLearningCenter.org · Built with Astro + Cloudflare Pages
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
